@@ -1,0 +1,152 @@
+@import url(reset.css);
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer
+}
+
+
+/* login form detail  */
+
+#login {
+    width: 360px;
+    margin: 80px;
+}
+
+.loginLogo {
+    height: 120px;
+    font-size: 90px;
+    text-align: center;
+}
+
+.loginForm h2 {
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.loginId,
+.loginPw {
+    width: 340px;
+    height: 39px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+.loginAdd {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+}
+
+.loginKeep {
+    line-height: 0px;
+}
+
+.loginKeep input {
+    width: 15px;
+    height: 15px;
+    margin: 0 4px 0 0;
+}
+
+.loginKeep label {
+    height: 20px;
+    position: relative;
+    top: -2.5px;
+    font-size: 14px;
+}
+
+.accountnull {
+    text-align: right;
+    font-size: 14px;
+}
+
+.loginBtn {
+    height: 48px;
+    width: 360px;
+    background-color: #f0957E;
+    color: whitesmoke;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.accountforgot {
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.loginOr {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 12px;
+    margin: 24px 0px;
+}
+
+.loginOr::before {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.35);
+    width: 210px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 10px 0 0;
+}
+
+.loginOr::after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.35);
+    width: 210px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0 0 0 10px;
+}
+
+.loginGl {
+    width: 360px;
+    height: 48px;
+    border-radius: 3px;
+    border: 1px solid rgb(193, 79, 68);
+    font-size: 13px;
+    margin: 0 0 10px 0;
+}
+
+.loginFb {
+    width: 360px;
+    height: 48px;
+    border-radius: 3px;
+    background-color: #375397;
+    color: whitesmoke;
+    font-size: 13px;
+}
+
+.loginCompany {
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    bottom: 30px;
+}
