@@ -6,15 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Curtaincall | 로그인</title>
 </head>
 
 <body>
+    <div id="container">
+        <!-- <img src=""> -->
+        <div class="menubtn">
+            <div class="menubtn_burger"></div>
+        </div>
+    </div>
     <form id="login">
-        <div class="loginLogo">Logo</div>
         <div class="loginForm">
+            <div class="loginLogo"><img src="ssArtboard 1.svg" /></div>
             <h2>로그인</h2>
             <input class="loginId" type="text" placeholder="아이디">
             <input class="loginPw" type="text" placeholder="비밀번호">
@@ -22,14 +29,15 @@
                 <p class="loginKeep"><input type="checkbox"><label>로그인 유지</label></p>
                 <div class="accountnull">계정이 없으신가요? <a href="">회원가입</a></div>
             </div>
+            <button class="loginBtn">로그인</button>
+            <div class="loginOr">OR</div>
+            <button class="loginGl">Google을 사용하여 로그인</button>
+            <button class="loginFb">Facebook을 사용하여 로그인</button>
+            <div class="accountforgot">계정을 잊으셨나요? <a href="">아이디 / 비밀번호 찾기</a></div>
         </div>
-        <button class="loginBtn">로그인</button>
-        <div class="accountforgot">계정을 잊으셨나요? <a href="">아이디 / 비밀번호 찾기</a></div>
-        <div class="loginOr">OR</div>
-        <button class="loginGl">Google을 사용하여 로그인</button>
-        <button class="loginFb">Facebook을 사용하여 로그인</button>
-        <div class="loginCompany">K.tory</div>
+        <div class="loginCompany"><img src="ssArtboard 1.svg" /></div>
     </form>
+    <script src="script.js"></script>
 </body>
 
 </html>
