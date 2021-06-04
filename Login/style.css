@@ -27,8 +27,8 @@ button {
 /* header button details */
 
 .menubtn {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -41,8 +41,8 @@ button {
 }
 
 .menubtn_burger {
-    width: 36px;
-    height: 5px;
+    width: 30px;
+    height: 4px;
     background: #000;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
@@ -52,8 +52,8 @@ button {
 .menubtn_burger::before, .menubtn_burger::after {
     content: '';
     position: absolute;
-    width: 36px;
-    height: 5px;
+    width: 30px;
+    height: 4px;
     background: #000;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
@@ -61,11 +61,11 @@ button {
 }
 
 .menubtn_burger::before {
-    transform: translateY(-13px);
+    transform: translateY(-11px);
 }
 
 .menubtn_burger::after {
-    transform: translateY(13px);
+    transform: translateY(11px);
 }
 
 /* ANIMATION */
