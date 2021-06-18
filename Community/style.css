@@ -8,8 +8,21 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.inner_container {
+.chatshortcut {
+    position: fixed;
+    right: 36px;
+    bottom: 24px;
+    width: 144px;
+    height: 36px;
+    border-radius: 72px;
+    border: 1.5px solid black;
+}
+
+/* header details */
+
+.header_inner_container {
     width: 1280px;
+    padding: 0 40px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -24,14 +37,12 @@ header {
     border-bottom: 1px solid black;
     display: flex;
     align-items: center;
-    
 }
 
 .logo_nav {
     width: 380px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .logo {
@@ -47,7 +58,7 @@ header nav {
 
 header a {
     /* width */
-    padding:6px;
+    padding: 6px;
     font-size: 20px;
 }
 
@@ -57,11 +68,12 @@ header a {
     display: flex;
     align-items: center;
     border-bottom: 1px solid black;
+    margin-bottom: 4px;
 }
 
 .search {
     width: 320px;
-    height: 40px;
+    height: 40x;
     font-size: 16px;
     padding: 0;
     border: 0;
@@ -97,4 +109,204 @@ header a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* main details */
+
+.carousel {
+    height: 300px;
+    overflow: hidden;
+}
+
+.main_inner_container {
+    width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: space-between;
+
+}
+
+main h1 {
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin:20px 0;
+}
+
+.mainactor {
+    width: 400px;
+    height: 180px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, #EBEBEB 40%, #FFFFFF 40%);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actor {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.actorimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.actorinfo {
+    height: 120px;
+    padding-top:20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.actorname {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.actorname small {
+    font-size: 16px;
+}
+
+.actorlink button {
+    height: 32px;
+    font-size: 26px;
+    border: none;
+    margin-right: 8px;
+    padding: 0;
+}
+
+.actorinfo li::before {
+    content: "-";
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.actorinfo li {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.actorlink {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actorlink button {
+    height: 26px;
+    font-size: 26px;
+    border: none;
+    padding: 0;
+    background-color: white;
+}
+
+.actorlink i {
+    text-align: center;
+    line-height: 26px;
+}
+
+
+/* footer details */
+
+.footer_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_inner_container {
+    width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    height: 240px;
+    background-color: #ecf0f1;
+}
+
+footer .footerlogo {
+    margin: 16px 0;
+    width: 120px;
+    height: 32px;
+}
+
+footer hr {
+    margin: 0;
+}
+
+footer table {
+    border-top: 1px solid #444444;
+    font-size: 14px;
+}
+
+footer .tablestrong {
+    font-weight: 600;
+    width: 72px;
+    /* height: 20px; */
+}
+
+footer th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px 0;
+}
+
+footer .pagelinks a {
+    cursor: default;
+}
+
+footer .contact {
+    display: flex;
+    margin: 10px 0 36px 0;
+    justify-content: space-between;
+}
+
+footer .address {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+footer .snslink {
+    display: flex;
+    align-items: center;
+}
+
+footer .snslink button {
+    height: 32px;
+    font-size: 26px;
+    border: none;
+    margin-right: 8px;
+    padding: 0;
+}
+
+footer .fa-youtube {
+    color: red;
+}
+
+footer .fa-instagram {
+    background: linear-gradient(to bottom, rgb(252, 176, 69), rgb(253, 29, 29), rgb(131, 58, 180));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer .gschool {
+    height: 30px;
+    border: 1px solid #001354;
+}
+
+footer .copyright {
+    font-size: 12px;
+    color: #7f8c8d;
+    text-align: right;
 }
