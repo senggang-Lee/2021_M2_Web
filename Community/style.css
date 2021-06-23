@@ -6,6 +6,7 @@ a {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 60px;
 }
 
 .chatshortcut {
@@ -21,7 +22,7 @@ body {
 /* header details */
 
 .header_inner_container {
-    width: 1280px;
+    width: 1200px;
     padding: 0 40px;
     margin: 0 auto;
     display: flex;
@@ -36,7 +37,10 @@ header {
     background-color: white;
     border-bottom: 1px solid black;
     display: flex;
+    position: fixed;
+    top: 0;
     align-items: center;
+    z-index: 1;
 }
 
 .logo_nav {
@@ -57,9 +61,13 @@ header nav {
 }
 
 header a {
-    /* width */
     padding: 6px;
     font-size: 20px;
+    transition: .5s;
+}
+
+header a:hover {
+    transform: scale(104%);
 }
 
 .searchbox {
@@ -113,30 +121,79 @@ header a {
 
 /* main details */
 
+.carouselctn {
+    position: relative;
+    /* top:60px */
+}
+
 .carousel {
     height: 300px;
+    width: 1920px;
     overflow: hidden;
+    width: 100%;
+}
+
+.carouselItem {
+    width: 100%;
+    width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 0;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    transform: scale(.95);
+}
+
+.showingg {
+    opacity: 1;
+    z-index: 1;
+    transform: none;
+}
+
+.btnctn {
+    /* position: absolute; */
+    width: 129px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 24px;
+}
+
+.carouselbtn {
+    z-index: 1;
+    width: 36px;
+    height: 6px;
+    margin: 0 2px;
+    border: 0;
+    border-radius: 3px;
 }
 
 .main_inner_container {
-    width: 1280px;
+    width: 1200px;
     padding: 0 40px;
     margin: 0 auto;
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-
 }
 
-main h1 {
+main .actortitle {
     font-size: 30px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
-    margin:20px 0;
+    margin: 2px 0 20px 0;
+}
+
+.mainactorlist {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
 }
 
 .mainactor {
-    width: 400px;
+    width: 370px;
+    min-width: 370px;
     height: 180px;
     border-radius: 12px;
     background: linear-gradient(to bottom, #EBEBEB 40%, #FFFFFF 40%);
@@ -144,11 +201,21 @@ main h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 45px;
+    transition: .5s;
+}
+
+.mainactor:hover {
+    transform: scale(104%);
+}
+
+.mainactorlast {
+    margin: 0;
 }
 
 .actor {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     overflow: hidden;
     margin-left: 20px;
@@ -161,17 +228,18 @@ main h1 {
 }
 
 .actorinfo {
-    height: 120px;
-    padding-top:20px;
-    margin-right: 20px;
+    height: 140px;
+    padding-top: 10px;
+    margin-right: 16px;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .actorname {
     font-size: 24px;
-    margin-bottom: 12px;
+    margin-top: 16px;
+    /* margin-bottom: 12px; */
 }
 
 .actorname small {
@@ -194,7 +262,8 @@ main h1 {
 
 .actorinfo li {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 13px;
 }
 
 .actorlink {
@@ -215,6 +284,129 @@ main h1 {
     line-height: 26px;
 }
 
+main hr {
+    margin: 0;
+}
+
+.writebutton {
+    position: relative;
+    transition: .5s;
+}
+
+.write {
+    transition: .5s;
+}
+
+.write:hover {
+    transform: scale(105%);
+}
+
+.actorinput {
+    position: absolute;
+    right: 0px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 420px;
+    height: 270px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.showing {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 420px;
+    height: 270px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.actornameinput {
+    width: 390px;
+    height: 20px;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.textinput {
+    width: 390px;
+    height: 200px;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    text-align: inherit;
+}
+
+.boardtitle {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.boardtitle h1 {
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.boardtitle button {
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: 0;
+    background-color: white;
+    color: #191919;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+main table {
+    border-top: 1px solid #444444;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+main th {
+    border-bottom: 1px solid #444444;
+    padding: 12px 0;
+    font-weight: 600;
+}
+
+main td {
+    border-bottom: 1px solid #444444;
+    padding: 12px 0;
+}
+
+.maintablenum {
+    width: 36px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.maintablename {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.maintabledate {
+    width: 100px;
+    text-align: center;
+    margin: 0 10px;
+}
 
 /* footer details */
 
@@ -224,7 +416,8 @@ main h1 {
 }
 
 .footer_inner_container {
-    width: 1280px;
+    width: 1200px;
+    height: 280px;
     padding: 0 40px;
     margin: 0 auto;
     display: flex;
@@ -232,12 +425,12 @@ main h1 {
 }
 
 footer {
-    height: 240px;
+    height: 280px;
     background-color: #ecf0f1;
 }
 
 footer .footerlogo {
-    margin: 16px 0;
+    margin: 24px 0;
     width: 120px;
     height: 32px;
 }
