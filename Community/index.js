@@ -1,9 +1,9 @@
 // write form edit
 
 const writeButton = document.querySelector('.write'),
-writeForm = document.querySelector('.actorinput');
+    writeForm = document.querySelector('.actorinput');
 
-function writeFormControl (event) {
+function writeFormControl(event) {
     if (writeForm.className !== 'showing') {
         writeForm.classList.remove('actorinput');
         writeForm.classList.add('showing');
@@ -19,3 +19,40 @@ writeButton.addEventListener("click", writeFormControl)
 
 // carousel edit
 
+const carousel = document.querySelector(".carousel"),
+    carouselItem = document.querySelector(".carouselItem"),
+    body = document.querySelector("body");
+
+let Width = body.offsetWidth;
+let p = 0
+
+function slide(event) {
+    if (-(Width * 2) < p) {
+        p = p - Width;
+    } else {
+        p = 0;
+    }
+    carousel.style.transform = `translateX(${p}px)`
+    buttonColor();
+}
+
+function resize(event) {
+    Width = body.offsetWidth;
+    carousel.style.width = `${Width * 3}px`
+    carouselItem.style.width = `${Width}px`
+    carousel.style.transform = `translateX(0px)`
+}
+
+function buttonColor() {
+    if (carousel.style.transform == `translateX(0px)`) {
+        document.querySelector(".carouselbtn1").style.backgroundColor = `red`;
+    } else if (carousel.style.transform == `translateX(0px)`) {
+        document.querySelector(".carouselbtn1").style.backgroundColor = `red`;
+    }
+}
+
+resize();
+
+document.querySelector(".carouselbtn1").style.backgroundColor = `red`;
+window.addEventListener("resize", resize);
+carousel.addEventListener("click", slide);
