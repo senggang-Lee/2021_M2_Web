@@ -1,3 +1,14 @@
+const loginForm = document.querySelector(".loginForm"),
+    loginBtn = document.querySelector(".fa-user");
+
+const LOGIN_SHOW = "loginShowing";
+
+function loginHandle(event) {
+    loginForm.classList.toggle(LOGIN_SHOW);
+};
+
+loginBtn.addEventListener("click", loginHandle);
+
 // write form edit
 
 const writeButton = document.querySelector('.write'),
